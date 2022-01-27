@@ -22,11 +22,11 @@ help_text = """
 - /saavn <song name>: Download songs via JioSaavn
 - /deezer <song name>: Download songs via Deezer
 - Send youtube url to my pm for download it on audio format
+ """       
 
-➟ <b>Mαde by ▷ @ZauteKm</b>
-"""
 
-@app.on_message(filters.command("start"))
+
+@app.on_message(filters.command("stahdrt"))
 async def start(client, message):
     chat_id = message.chat.id
     user_id = message.from_user["id"]
