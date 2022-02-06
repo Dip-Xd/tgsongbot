@@ -1,6 +1,6 @@
 youtube_search
 requests
-youtube_dl
+youtube_dl==2021.12.17
 aiohttp
 Pyrogram
 Tgcrypto
