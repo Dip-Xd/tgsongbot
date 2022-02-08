@@ -24,7 +24,7 @@ def time_to_seconds(time):
 ## Commands --------------------------------
 
 
-@bot.on_message(filters.command(['anu']))
+@Client.on_message(filters.command(['anu']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
