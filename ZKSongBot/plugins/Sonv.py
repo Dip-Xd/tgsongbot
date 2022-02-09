@@ -11,7 +11,7 @@ import requests
 
 import os
 from ZKSongBot import Jebot as app
-
+from time import time
 
 ## Extra Fns -------------------------------
 
@@ -30,7 +30,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎.')
+    m = message.reply('🔎 `SEARCHING`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -68,7 +68,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("🔎.")
+    m.edit("🔎`Hmmmm`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -82,7 +82,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='md')
         m.delete()
     except Exception as e:
-        m.edit('❌ 𝐄𝐫𝐫𝐨𝐫')
+        m.edit('❌ `𝐄𝐫𝐫𝐨𝐫`')
         print(e)
     try:
         os.remove(audio_file)
